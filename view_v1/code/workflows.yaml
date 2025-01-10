@@ -1,0 +1,7 @@
+library: workflows
+
+automate: 
+- name: spend
+  schedule: MANUAL
+  include:
+  - view: input.spend_data_view

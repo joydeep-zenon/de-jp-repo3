@@ -1,0 +1,25 @@
+displayName: jpdeproject
+projectKey: jpdeproject
+version: 1.0.0
+modules:
+- fileSearchPaths:
+  - code
+  - taxonomy
+  name: common
+- fileSearchPaths:
+  - code
+  name: data
+  dependencies:
+  - common
+- fileSearchPaths:
+  - code
+  name: view_v1
+  dependencies:
+  - common
+  - data
+- fileSearchPaths:
+  - code
+  name: view_v2
+  dependencies:
+  - common
+  - data  

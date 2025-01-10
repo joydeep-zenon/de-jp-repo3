@@ -1,0 +1,9 @@
+library: collections
+
+collections: 
+- name: spend_data_coll
+  format: delimitedFile
+  filePatterns:
+  - "/home/deuser/workspaces/deintgtest/data/Spend_Test.csv"
+  schema: schemas.spend_data_schema
+  header: true

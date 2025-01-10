@@ -1,0 +1,189 @@
+library: schemas
+
+schemas: 
+- name: spend_data_schema
+  columns:
+  - name: Zenon ID
+    typeID: Common:Integer
+  - name: Payment Method
+    typeID: Common:String
+  - name: Invoice Source
+    typeID: Common:String
+  - name: Paid Amount
+    typeID: Common:String
+  - name: Operating Unit
+    typeID: Common:String
+  - name: Level 1 Description
+    typeID: Common:String
+  - name: Level 2 Description
+    typeID: Common:String
+  - name: Level 3 Description
+    typeID: Common:String
+  - name: Vendor ID
+    typeID: Common:Integer
+  - name: Level 4 Description
+    typeID: Common:String
+  - name: One Time Vendor
+    typeID: Common:String
+  - name: Parent Supplier Name
+    typeID: Common:String
+  - name: Original Supplier Name
+    typeID: Common:String
+  - name: Supplier Address 1
+    typeID: Common:String
+  - name: Supplier Address 2
+    typeID: Common:String
+  - name: Supplier Address 3
+    typeID: Common:String
+  - name: Supplier City
+    typeID: Common:String
+  - name: Supplier State
+    typeID: Common:String
+  - name: Supplier Postal Code
+    typeID: Common:Integer
+  - name: Supplier Country
+    typeID: Common:String
+  - name: Negotiated Payment Terms
+    typeID: Common:String
+  - name: Discount Available Indicator
+    typeID: Common:String
+  - name: Days to Pay for Discount
+    typeID: Common:Integer
+  - name: Size of Discount
+    typeID: Common:Real
+  - name: Negotiated Days-To-Pay
+    typeID: Common:Integer
+  - name: Contracted Supplier Indicator
+    typeID: Common:String
+  - name: Invoice Number
+    typeID: Common:Integer
+  - name: Invoice Line Number
+    typeID: Common:Integer
+  - name: Local Gross Amount
+    typeID: Common:String
+  - name: Invoice Date
+    typeID: Common:String
+  - name: Invoice Posting Date
+    typeID: Common:String
+  - name: Invoice Paid Date
+    typeID: Common:String
+  - name: Invoice Due Date
+    typeID: Common:String
+  - name: Account ID
+    typeID: Common:String
+  - name: Account Name
+    typeID: Common:String
+  - name: Operating Company Code
+    typeID: Common:String
+  - name: Cost Center Code
+    typeID: Common:String
+  - name: Cost Center Name
+    typeID: Common:String
+  - name: PO Indicator
+    typeID: Common:String
+  - name: PO Number
+    typeID: Common:Long
+  - name: PO Line Number
+    typeID: Common:Integer
+  - name: PO Line Description
+    typeID: Common:String
+  - name: PO Unit Price
+    typeID: Common:String
+  - name: PO Quantity
+    typeID: Common:Real
+  - name: Invoice ID
+    typeID: Common:Integer
+  - name: Invoice Description
+    typeID: Common:String
+  - name: Line Type
+    typeID: Common:String
+  - name: Commodity Code
+    typeID: Common:String
+  - name: Legal Entity Name
+    typeID: Common:String
+  - name: Vendor No
+    typeID: Common:Integer
+  - name: Vendor Site Code
+    typeID: Common:String
+  - name: Vendor Site ID
+    typeID: Common:Integer
+  - name: Currency
+    typeID: Common:String
+  - name: Grouped Name
+    typeID: Common:String
+  - name: Supplier Group Name
+    typeID: Common:String
+  - name: Discount Multiplier
+    typeID: Common:Real
+  - name: PO Distribution ID
+    typeID: Common:Integer
+  - name: inv_srce
+    typeID: Common:String
+  - name: inv_pay_term
+    typeID: Common:String
+  - name: expn_ctgy_nm
+    typeID: Common:String
+  - name: expn_type
+    typeID: Common:String
+  - name: fr_2
+    typeID: Common:Boolean
+  - name: fr_4
+    typeID: Common:Integer
+  - name: fr_5_1a
+    typeID: Common:Boolean
+  - name: fr_6
+    typeID: Common:Integer
+  - name: fr_6_label
+    typeID: Common:Integer
+  - name: fr_check7
+    typeID: Common:Boolean
+  - name: fr_check7_vendlevel
+    typeID: Common:Boolean
+  - name: panon_check1
+    typeID: Common:Integer
+  - name: panon_check2
+    typeID: Common:Integer
+  - name: panon_4
+    typeID: Common:Boolean
+  - name: Parent Supplier Name_Updated
+    typeID: Common:String
+  - name: pymt_sta
+    typeID: Common:String
+  - name: inv_sta
+    typeID: Common:String
+  - name: Operating Country
+    typeID: Common:String
+  - name: Unit of Measurement
+    typeID: Common:String
+  - name: PO Creation Date
+    typeID: Common:Integer
+  - name: fr_2_vend
+    typeID: Common:String
+  - name: fr_2a_vend
+    typeID: Common:String
+  - name: fr_4_vend
+    typeID: Common:Integer
+  - name: fr_6_vend
+    typeID: Common:Integer
+  - name: fr_check7_vend
+    typeID: Common:Integer
+  - name: panon_4_vend
+    typeID: Common:Integer
+  - name: panon_check3
+    typeID: Common:Integer
+  - name: Max Negotiated Days-To-Pay
+    typeID: Common:Integer
+  - name: Very High Amount
+    typeID: Common:Boolean
+  - name: Days Paid Early Range
+    typeID: Common:String
+  - name: Contract End Date
+    typeID: Common:Integer
+  - name: Contract ID
+    typeID: Common:String
+  - name: UOM
+    typeID: Common:String
+  - name: Country
+    typeID: Common:String
+  - name: Category Manager
+    typeID: Common:String

@@ -1,0 +1,12 @@
+library: input
+
+views: 
+- name: spend_data_view
+  engine: SPARK
+  transformations:
+  - operation: readCollection
+    as: readCollection
+    collection: data.collections.spend_data_coll
+    enforceSchema: true
+  outputDefinition:
+    type: delimited

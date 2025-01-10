@@ -1,0 +1,45 @@
+library: user_detail
+
+collections: 
+- name: user_details_collection
+  header: true
+  format: delimitedFile
+  filePatterns:
+  - /home/deuser/workspaces/dejpsoldefloc/JP_10-JAN_25/common/sample_data/people-120-records.csv
+  schema: user_details_schema
+schemas: 
+- name: user_details_schema
+  columns:
+  - name: Index
+    typeID: Common:Integer
+  - name: User Id
+    typeID: Common:String
+  - name: First Name
+    typeID: Common:String
+  - name: Last Name
+    typeID: Common:String
+  - name: Sex
+    typeID: Common:String
+  - name: Email
+    typeID: Common:String
+  - name: Phone
+    typeID: Common:String
+  - name: Date of birth
+    typeID: Common:String
+  - name: Job Title
+    typeID: Common:String
+  - name: Age
+    typeID: Common:Integer
+  - name: Income
+    typeID: Common:Integer
+  - name: Tax Submitted
+    typeID: Common:Integer
+
+views: 
+- name: user_details_view
+  engine: SPARK
+  transformations:
+  - as: readCollection
+    operation: readCollection
+    enforceSchema: true
+    collection: user_details_collection

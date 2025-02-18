@@ -8,6 +8,8 @@ collections:
   - /home/deuser/workspaces/dejpsoldefloc/JP_10-JAN_25/common/sample_data/people-120-records.csv
   schema: user_details_schema
   includeSourceInfo: true
+  multiline: true
+  enableFileSplits: true
 schemas: 
 - name: user_details_schema
   columns:

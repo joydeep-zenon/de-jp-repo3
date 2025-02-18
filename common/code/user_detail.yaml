@@ -71,5 +71,8 @@ views:
     operation: basicStats
   - as: assertEqualHash
     operation: assertEqualHash
+  - as: groupInsights
+    operation: groupInsights
+    language: EXPRESSION
 
   

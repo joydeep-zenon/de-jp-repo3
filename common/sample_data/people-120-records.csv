@@ -1,4 +1,4 @@
-Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title,Age,Income,Tax Submitted
+Index,User_Id,First_Name,Last_Name,Sex,Email,Phone,Date_of_birth,Job_Title,Age,Income,Tax_Submitted
 1,9CEA5eB6C5691e8,Ruth,Lucas,Female,buckshirley@example.net,001-440-057-2969x867,1/16/1931,"Therapist, occupational",93,6307687,1955383
 2,A7CCb36dCBeed5f,Clayton,Acevedo,Female,lesterjoe@example.net,(063)327-8014,9/5/1923,"Scientist, research (medical)",101,950730,66551
 3,1eDdd4F608701A9,Justin,Buckley,Female,mark74@example.net,(871)983-5432,2/13/1949,Government social research officer,75,1275582,63779

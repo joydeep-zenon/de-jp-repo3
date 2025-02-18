@@ -1,0 +1,171 @@
+library: view_v1
+
+collections: 
+- name: people_120_records_data_source
+  header: true
+  format: delimitedFile
+  filePatterns:
+  - /home/deuser/workspaces/dejpsoldefloc/JP_10-JAN_25/common/sample_data/people-120-records.csv
+  schema: people_120_records_schema
+  includeSourceInfo: true
+schemas: 
+- name: new_test_schema
+  columns:
+  - name: Index
+    typeID: Common:Integer
+    timeZone: '-'
+    nullable: false
+    trimmed: true
+  - name: User_Id
+    typeID: Common:String
+    timeZone: '-'
+    nullable: false
+    trimmed: true
+  - name: First_Name
+    typeID: Common:String
+    timeZone: '-'
+    nullable: false
+    trimmed: true
+  - name: Last_Name
+    typeID: Common:String
+    timeZone: '-'
+    nullable: false
+    trimmed: true
+  - name: Sex
+    typeID: Common:String
+    timeZone: '-'
+    nullable: false
+    trimmed: true
+  - name: Email
+    typeID: Common:String
+    timeZone: '-'
+    nullable: false
+    trimmed: true
+  - name: Phone
+    typeID: Common:String
+    timeZone: '-'
+    nullable: false
+    trimmed: true
+  - name: Date_of_birth
+    typeID: Common:String
+    timeZone: '-'
+    nullable: false
+    trimmed: true
+  - name: Job_Title
+    typeID: Common:String
+    timeZone: '-'
+    nullable: false
+    trimmed: true
+  - name: Age
+    typeID: Common:Integer
+    timeZone: '-'
+    nullable: false
+    trimmed: true
+  - name: Income
+    typeID: Common:Integer
+    timeZone: '-'
+    nullable: false
+    trimmed: true
+  - name: Tax_Submitted
+    typeID: Common:Integer
+    timeZone: '-'
+    nullable: false
+    trimmed: true
+  nullable: false
+  trimmed: true
+- name: people_120_records_schema
+  columns:
+  - name: Index
+    typeID: Common:Integer
+    timeZone: '-'
+    trimmed: true
+  - name: User_Id
+    typeID: Common:String
+    timeZone: '-'
+    trimmed: true
+  - name: First_Name
+    typeID: Common:String
+    timeZone: '-'
+    trimmed: true
+  - name: Last_Name
+    typeID: Common:String
+    timeZone: '-'
+    trimmed: true
+  - name: Sex
+    typeID: Common:String
+    timeZone: '-'
+    trimmed: true
+  - name: Email
+    typeID: Common:String
+    timeZone: '-'
+    trimmed: true
+  - name: Phone
+    typeID: Common:String
+    timeZone: '-'
+    trimmed: true
+  - name: Date_of_birth
+    typeID: Common:String
+    timeZone: '-'
+    trimmed: true
+  - name: Job_Title
+    typeID: Common:String
+    timeZone: '-'
+    trimmed: true
+  - name: Age
+    typeID: Common:Integer
+    timeZone: '-'
+    trimmed: true
+  - name: Income
+    typeID: Common:Integer
+    timeZone: '-'
+    trimmed: true
+  - name: Tax_Submitted
+    typeID: Common:Integer
+    timeZone: '-'
+    trimmed: true
+  trimmed: true
+
+views: 
+- name: check_map_view
+  engine: SPARK
+  transformations:
+  - as: readCollection1
+    operation: readCollection
+    enforceSchema: true
+    collection: people_120_records_data_source
+    parsingRejectsAs: test
+  - as: map
+    operation: map
+    mappings: 
+    -
+      target: User_Id
+      foreach: {}
+    - source: First Name
+      foreach: {}
+      target: First_Name
+    - source: Last Name
+      foreach: {}
+      target: Last_Name
+    - source: Date of birth
+      foreach: {}
+      target: Date_of_birth
+    - source: Job Title
+      foreach: {}
+      target: Job_Title
+    - source: Tax Submitted
+      foreach: {}
+      target: Tax_Submitted
+    source: readCollection
+  - as: dedup
+    operation: dedup
+    source: map
+    rejectAs: duplicate_post_map
+    groupKeys:
+    - User_Id
+    - Last_Name
+    keep: ALL_FIRST
+    sortKeys:
+    - First_Name asc
+  outputDefinition:
+    type: delimited
+  

@@ -8,5 +8,12 @@ views:
     as: readCollection
     collection: data.collections.spend_data_coll
     enforceSchema: true
+  - as: dedup
+    operation: dedup
+    source: readCollection
+    groupKeys:
+    - Zenon ID
+    sortKeys:
+    - Paid Amount asc
   outputDefinition:
     type: delimited

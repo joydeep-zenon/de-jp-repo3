@@ -12,28 +12,52 @@ schemas:
   columns:
   - name: Index
     typeID: Common:Integer
-  - name: User Id
+    timeZone: '-'
+  - name: User_Id
     typeID: Common:String
-  - name: First Name
+    timeZone: '-'
+    displayName: ""
+    desc: ""
+  - name: First_Name
     typeID: Common:String
-  - name: Last Name
+    timeZone: '-'
+    displayName: ""
+    desc: ""
+  - name: Last_Name
     typeID: Common:String
+    timeZone: '-'
+    displayName: ""
+    desc: ""
   - name: Sex
     typeID: Common:String
+    timeZone: '-'
   - name: Email
     typeID: Common:String
+    timeZone: '-'
   - name: Phone
     typeID: Common:String
-  - name: Date of birth
+    timeZone: '-'
+  - name: Date_of_birth
     typeID: Common:String
-  - name: Job Title
+    timeZone: '-'
+    displayName: ""
+    desc: ""
+  - name: Job_Title
     typeID: Common:String
+    timeZone: '-'
+    displayName: ""
+    desc: ""
   - name: Age
     typeID: Common:Integer
+    timeZone: '-'
   - name: Income
     typeID: Common:Integer
-  - name: Tax Submitted
+    timeZone: '-'
+  - name: Tax_Submitted
     typeID: Common:Integer
+    timeZone: '-'
+    displayName: ""
+    desc: ""
 
 views: 
 - name: user_details_view
@@ -43,3 +67,5 @@ views:
     operation: readCollection
     enforceSchema: true
     collection: user_details_collection
+
+  

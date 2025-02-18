@@ -67,5 +67,9 @@ views:
     operation: readCollection
     enforceSchema: true
     collection: user_details_collection
+  - as: basicStats
+    operation: basicStats
+  - as: assertEqualHash
+    operation: assertEqualHash
 
   

@@ -67,6 +67,8 @@ views:
     operation: readCollection
     enforceSchema: true
     collection: user_details_collection
+    parsingRejectsAs: test
+    upperBound: 234321251232
   - as: basicStats
     operation: basicStats
   - as: assertEqualHash

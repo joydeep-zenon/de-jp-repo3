@@ -8,6 +8,8 @@ collections:
   - /home/deuser/workspaces/dejpsoldefloc/JP_10-JAN_25/common/sample_data/people-120-records.csv
   schema: people_120_records_schema
   includeSourceInfo: true
+  includeHiddenFiles: true
+  multiline: true
 schemas: 
 - name: new_test_schema
   columns:

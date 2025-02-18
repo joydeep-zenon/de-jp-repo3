@@ -2,7 +2,6 @@ library: user_detail
 
 collections: 
 - name: user_details_collection
-  header: true
   format: delimitedFile
   filePatterns:
   - /home/deuser/workspaces/dejpsoldefloc/JP_10-JAN_25/common/sample_data/people-120-records.csv

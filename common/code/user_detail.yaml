@@ -10,6 +10,7 @@ collections:
   includeSourceInfo: true
   multiline: true
   enableFileSplits: true
+  includeHiddenFiles: true
 schemas: 
 - name: user_details_schema
   columns:

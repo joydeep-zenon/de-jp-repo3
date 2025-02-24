@@ -158,16 +158,6 @@ views:
       foreach: {}
       target: Tax_Submitted
     source: readCollection
-  - as: dedup
-    operation: dedup
-    source: map
-    rejectAs: duplicate_post_map
-    groupKeys:
-    - User_Id
-    - Last_Name
-    keep: ALL_FIRST
-    sortKeys:
-    - First_Name asc
   outputDefinition:
     type: delimited
   

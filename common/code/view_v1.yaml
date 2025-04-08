@@ -1,5 +1,13 @@
 library: view_v1
 
+automate: 
+- name: check_map_view_workflow
+  schedule: MANUAL
+  include:
+  - view: check_map_view
+  meta:
+    displayName: Check Map View Workflow
+
 collections: 
 - name: people_120_records_data_source
   header: true
@@ -135,29 +143,6 @@ views:
     operation: readCollection
     enforceSchema: true
     collection: people_120_records_data_source
-    parsingRejectsAs: test
-  - as: map
-    operation: map
-    mappings: 
-    -
-      target: User_Id
-      foreach: {}
-    - source: First Name
-      foreach: {}
-      target: First_Name
-    - source: Last Name
-      foreach: {}
-      target: Last_Name
-    - source: Date of birth
-      foreach: {}
-      target: Date_of_birth
-    - source: Job Title
-      foreach: {}
-      target: Job_Title
-    - source: Tax Submitted
-      foreach: {}
-      target: Tax_Submitted
-    source: readCollection
   outputDefinition:
     type: delimited
   

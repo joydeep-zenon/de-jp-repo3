@@ -1,6 +1,6 @@
 displayName: jpdeproject
 projectKey: jpdeproject
-version: 1.0.0
+version: 2.3.4
 modules:
 - fileSearchPaths:
   - code
@@ -22,4 +22,5 @@ modules:
   name: view_v2
   dependencies:
   - common
-  - data  
+  - data
+insightVersion: StudioMVersion-0.0

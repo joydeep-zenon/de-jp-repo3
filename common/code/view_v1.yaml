@@ -139,10 +139,17 @@ views:
 - name: check_map_view
   engine: SPARK
   transformations:
-  - as: readCollection1
+  - as: readCollection
     operation: readCollection
     enforceSchema: true
-    collection: people_120_records_data_source
+    collection: user_detail.user_details_collection
+  - as: callView
+    operation: callView
+    view: user_detail.user_details_view
+  - as: limitRows
+    operation: limitRows
+    skip: "${undefined}"
+    count: "${undefined}"
   outputDefinition:
     type: delimited
   

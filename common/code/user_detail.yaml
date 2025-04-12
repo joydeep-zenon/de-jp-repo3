@@ -63,10 +63,25 @@ views:
 - name: user_details_view
   engine: SPARK
   transformations:
-  - as: readCollection
-    operation: readCollection
-    enforceSchema: true
-    collection: user_details_collection
+  - as: viewInput
+    operation: viewInput
+    inputs:
+      inview: user_details_schema
+  - as: map
+    operation: map
+    source: inview
+    mappings:
+    - sourcePattern: ".*"
+      transformations:
+      - operation: "replaceAll"
+        substring: "-"
+        with: " "
+      - operation: "removeAll"
+        substring: " "
+  - as: viewOutput
+    operation: viewOutput
+    outputs:
+    - map
   outputDefinition:
     type: virtual
 
